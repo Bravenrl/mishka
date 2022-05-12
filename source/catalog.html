@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mishka - товары для дома</title>
+  </head>
+  <body class="page__body">
+    <header class="page-header">
+      <a href="#" class="page-header__logo">
+        <img
+          src="/img/logo-mobile.svg"
+          alt="Мишка логотип"
+          width="86"
+          height="35"
+        />
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="#">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="user-list__item">
+            <a href="#"
+              >Корзина:
+              <span>пока пуста</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="visually-hidden">Мишка - страница каталога</h1>
+      <section class="catalog-header">
+        <h2 class="catalog-header__title title">Каталог товаров</h2>
+      </section>
+      <section class="catalog-cards">
+        <h2 class="visually-hidden">Список товаров</h2>
+        <ul class="catalog-cards__list">
+          <li class="catalog-cards__item catalog-card">
+            <h3 class="catalog-card__title">Зайчик-попрыгайчик</h3>
+            <img
+              class="catalog-card__img"
+              src="/img/photo-1.png"
+              alt=""
+              width="334"
+              height="334"
+            />
+            <p class="catalog-card__params">Рост 30 см, вес 200 г</p>
+            <div class="catalog-card__cart-wrapper">
+              <span class="catalog-card__price">1200 руб</span>
+              <button class="catalog-card__cart-button" type="button">
+                <span class="visually-hidden">В корзину</span>
+              </button>
+            </div>
+          </li>
+          <li class="catalog-cards__item catalog-card">
+            <h3 class="catalog-card__title">Корзинка для белья</h3>
+            <img
+              class="catalog-card__img"
+              src="/img/photo-2.png"
+              alt=""
+              width="334"
+              height="334"
+            />
+            <p class="catalog-card__params">Диаметр 15 см, высота 10 см</p>
+            <div class="catalog-card__cart-wrapper">
+              <span class="catalog-card__price">690 руб</span>
+              <button class="catalog-card__cart-button" type="button">
+                <span class="visually-hidden">В корзину</span>
+              </button>
+            </div>
+          </li>
+          <li class="catalog-cards__item catalog-card">
+            <h3 class="catalog-card__title">Большая корзинка для игрушек</h3>
+            <img
+              class="catalog-card__img"
+              src="/img/photo-3.png"
+              alt=""
+              width="334"
+              height="334"
+            />
+            <p class="catalog-card__params">Диаметр 30 см, высота 30 см</p>
+            <div class="catalog-card__cart-wrapper">
+              <span class="catalog-card__price">1500 руб</span>
+              <button class="catalog-card__cart-button" type="button">
+                <span class="visually-hidden">В корзину</span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="catalog-info">
+        <h2 class="catalog-info__title title">Процесс производства</h2>
+        <video src="" class="catalog-info__video"></video>
+        <p class="catalog-info__text">
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео
+          о том, как появляются наши товары.
+        </p>
+        <button class="catalog-info__order button">Сделать заказ</button>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="https://instagram.com">
+              <span class="visually-hidden">Мы в инстаграме</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://facebook.com">
+              <span class="visually-hidden">Мы в фейсбуке</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://twitter.com">
+              <span class="visually-hidden">Мы в твиттере</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <a href="https://htmlacademy.ru" class="copyright__link">
+          <p class="copyright__text">Разработано</p>
+          <span class="visually-hidden">HTML-Academy</span>
+          <svg
+            class="copyright__svg"
+            width="27"
+            height="34"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.65 0h-.1L0 1.4v24.62L13.55 34 27 26.02V1.4L13.65 0ZM25.1 12.06 13.55 5.28v-.1h-.1l-.1-.1v.1L1.9 12.06V3.1l11.54-1.2 11.64 1.2v8.97ZM13.45 6.78l11.54 6.68-4.51 2.6-7.13-4.2v1.4l5.92 3.5-.9.49-5.02-3v1.4l3.81 2.3-.8.5-3.01-1.8v1.4l1.9 1.1-1.8 1.1-11.44-6.69 11.44-6.78ZM1.91 15.06l11.44 6.78v1l-7.93-4.7v1.4l8.03 4.79v1.1l-8.03-4.7v1.4l8.03 4.8 8.13-4.9v-5.18l3.41-2v9.98L13.45 31.7 1.91 24.93v-9.87Z"
+              fill="#46C1AE"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
