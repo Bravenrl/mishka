@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mishka - товары для дома</title>
+  </head>
+  <body class="page__body">
+    <header class="page-header">
+      <a href="#" class="page-header__logo">
+        <img
+          src="/img/logo-mobile.svg"
+          alt="Мишка логотип"
+          width="86"
+          height="35"
+        />
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="#">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="user-list__item">
+            <a href="#"
+              >Корзина:
+              <span>пока пуста</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="visually-hidden">Мишка - страница заказа</h1>
+      <section class="form-header">
+        <h2 class="form-header__title title">Вязание на заказ</h2>
+        <p class="form-header__text">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую
+          форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
+      </section>
+      <section class="order-form__wrapper">
+        <h2 class="visually-hidden">Форма заказа</h2>
+        <form action="order-form order">
+          <fieldset class="order__type type">
+            <legend class="order__legend">Тип</legend>
+            <ul class="order__list">
+              <li class="order__item">
+                <input
+                  class="type__input"
+                  type="radio"
+                  name="types"
+                  id="interior"
+                />
+                <label class="type__label" for="interior"
+                  >Аксессуар для интерьера</label
+                >
+              </li>
+              <li class="order__item">
+                <input class="type__input" type="radio" name="types" id="toy" />
+                <label class="type__label" for="toy">Детская игрушка</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="order__color color">
+            <legend class="order__legend">Цвет</legend>
+            <ul class="color__list">
+              <li class="color__item">
+                <input
+                  class="color__input"
+                  type="checkbox"
+                  name="color-white"
+                  id="white"
+                />
+                <label class="color__label" for="white">Белый</label>
+              </li>
+              <li class="color__item">
+                <input
+                  class="color__input"
+                  type="checkbox"
+                  name="color-grey"
+                  id="grey"
+                />
+                <label class="color__label" for="grey">Серый</label>
+              </li>
+              <li class="color__item">
+                <input
+                  class="color__input"
+                  type="checkbox"
+                  name="color-tiffany"
+                  id="tiffany"
+                />
+                <label class="color__label" for="tiffany">"Тифанни"</label>
+              </li>
+              <li class="color__item">
+                <input
+                  class="color__input"
+                  type="checkbox"
+                  name="color-black"
+                  id="black"
+                />
+                <label class="color__label" for="black">Чёрный</label>
+              </li>
+              <li class="color__item">
+                <input
+                  class="color__input"
+                  type="checkbox"
+                  name="color-pink"
+                  id="pink"
+                />
+                <label class="color__label" for="pink">Розовый</label>
+              </li>
+              <li class="color__item">
+                <input
+                  class="color__input"
+                  type="checkbox"
+                  name="color-orange"
+                  id="orange"
+                />
+                <label class="color__label" for="orange">Оранжевый</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="order__user user">
+            <legend class="order__legend">ФИО</legend>
+            <ul class="user__list">
+              <li class="user__item">
+                <label class="user__label" for="name">Имя:</label>
+                <input
+                  class="user__input"
+                  type="text"
+                  name="user-name"
+                  id="name"
+                />
+              </li>
+              <li class="user__item">
+                <label class="user__label" for="surname">Фамилия:</label>
+                <input
+                  class="user__input"
+                  type="text"
+                  name="user-surname"
+                  id="surname"
+                />
+              </li>
+              <li class="user__item">
+                <label class="user__label" for="patronymic">Отчество:</label>
+                <input
+                  class="user__input"
+                  type="text"
+                  name="user-patronymic"
+                  id="patronymic"
+                />
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="order__phone phone">
+            <legend class="order__legend">Тел</legend>
+            <input class="phone__input" type="tel" name="phone" id="phone" />
+            <label class="visually-hidden" for="phone">Телефон</label>
+          </fieldset>
+          <fieldset class="order__email email">
+            <legend class="order__legend">E-mail</legend>
+            <input class="email__input" type="email" name="email" id="email" />
+            <label class="visually-hidden" for="email">E-mail</label>
+          </fieldset>
+          <fieldset class="order__extra extra">
+            <legend class="order__legend">Доп</legend>
+            <textarea
+              class="extra__input"
+              type="text"
+              name="extra"
+              id="extra"
+            ></textarea>
+            <label class="visually-hidden" for="extra"
+              >Дополнительные пожелания</label
+            >
+          </fieldset>
+          <div class="order-form__submit submit">
+            <p class="submit__text">*Поля обязательны для заполнения</p>
+            <button class="submit_button button" type="submit">
+              Отправить заказ
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="https://instagram.com">
+              <span class="visually-hidden">Мы в инстаграме</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://facebook.com">
+              <span class="visually-hidden">Мы в фейсбуке</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="https://twitter.com">
+              <span class="visually-hidden">Мы в твиттере</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <a href="https://htmlacademy.ru" class="copyright__link">
+          <p class="copyright__text">Разработанно</p>
+          <span class="visually-hidden">HTML-Academy</span>
+          <svg
+            class="copyright__svg"
+            width="27"
+            height="34"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.65 0h-.1L0 1.4v24.62L13.55 34 27 26.02V1.4L13.65 0ZM25.1 12.06 13.55 5.28v-.1h-.1l-.1-.1v.1L1.9 12.06V3.1l11.54-1.2 11.64 1.2v8.97ZM13.45 6.78l11.54 6.68-4.51 2.6-7.13-4.2v1.4l5.92 3.5-.9.49-5.02-3v1.4l3.81 2.3-.8.5-3.01-1.8v1.4l1.9 1.1-1.8 1.1-11.44-6.69 11.44-6.78ZM1.91 15.06l11.44 6.78v1l-7.93-4.7v1.4l8.03 4.79v1.1l-8.03-4.7v1.4l8.03 4.8 8.13-4.9v-5.18l3.41-2v9.98L13.45 31.7 1.91 24.93v-9.87Z"
+              fill="#46C1AE"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
