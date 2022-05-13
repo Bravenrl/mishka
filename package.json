@@ -3,21 +3,50 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@types/autoprefixer": "10.2.0",
+    "@types/browser-sync": "2.26.3",
+    "@types/gulp": "4.0.9",
+    "@types/gulp-plumber": "0.0.33",
+    "@types/gulp-postcss": "8.0.2",
+    "@types/gulp-sass": "5.0.0",
+    "autoprefixer": "10.4.7",
+    "browser-sync": "2.27.9",
     "eslint": "8.15.0",
     "eslint-config-airbnb": "19.0.4",
-    "prettier": "2.6.2"
+    "gulp": "4.0.2",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "gulp-sass": "5.1.0",
+    "prettier": "2.6.2",
+    "sass": "1.51.0",
+    "stylelint": "14.8.2",
+    "stylelint-config-standard-scss": "3.0.0"
   },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "lint": "npm run editorconfig && npm run stylelint",
+    "build": "gulp styles",
+    "start": "gulp"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
+  ],
   "eslintConfig": {
     "extends": [
       "airbnb"
     ]
-  }
+  },
+  "engines": {
+    "node": "^16"
+  },
+  "type": "module"
 }
-
