@@ -1,9 +1,17 @@
 {
   "defaultSeverity": "warning",
-  "extends": ["stylelint-config-recommended-scss", "stylelint-config-recess-order"],
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-recess-order"
+  ],
   "customSyntax": "postcss-scss",
   "rules": {
-    "font-family-no-missing-generic-family-keyword": true,
+    "font-family-no-missing-generic-family-keyword": [
+      true,
+      {
+        "ignoreFontFamilies": ["Open Sans"]
+      }
+    ],
     "no-descending-specificity": null,
 
     "color-hex-case": "lower",
@@ -30,7 +38,7 @@
       }
     ],
 
-    "string-quotes": "double",
+    "string-quotes": "single",
 
     "unit-case": "lower",
 

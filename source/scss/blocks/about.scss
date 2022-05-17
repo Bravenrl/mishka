@@ -1,0 +1,67 @@
+.about {
+  padding: 0 30px;
+  margin-bottom: 43px;
+}
+
+.about__title {
+  font-size: 25px;
+}
+
+.about__list {
+  display: grid;
+  gap: 15px;
+  margin-top: 28px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 118%;
+}
+
+.about__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+
+
+  &::before {
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+}
+
+.material {
+  &::before {
+    content: url('../../img/icon-1.svg');
+  }
+}
+
+.style {
+  &::before {
+    content: url('../../img/icon-3.svg');
+  }
+}
+
+.like {
+  &::before {
+    content: url('../../img/icon-5.svg');
+  }
+}
+
+.handmade {
+  &::before {
+    content: url('../../img/icon-2.svg');
+  }
+}
+
+.support {
+  &::before {
+    content: url('../../img/icon-4.svg');
+  }
+}
+
+.package {
+  &::before {
+    content: url('../../img/icon-6.svg');
+  }
+}

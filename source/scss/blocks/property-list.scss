@@ -1,0 +1,13 @@
+.property-item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  font-size: 15px;
+  line-height: 20px;
+  color: $black-blue-text;
+  border-bottom: 1px solid $gray-border;
+}
+
+.property-item__key {
+  flex-basis: 97px;
+}
