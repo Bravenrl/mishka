@@ -32,3 +32,34 @@
 .catalog-info__order {
   margin-right: 34px;
 }
+
+.catalog-info__video-wrapper {
+  position: relative;
+  margin-left: -34px;
+}
+
+.catalog-info__play-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 101px;
+  height: 77px;
+  padding: 0;
+  margin: auto;
+  overflow: auto;
+  cursor: pointer;
+  background-color: $green-left-btn;
+  border: 5px solid $white;
+  border-radius: 20%;
+
+  &::before {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    content: '';
+    border: 20px solid transparent;
+    border-left: 35px solid $white;
+  }
+}
