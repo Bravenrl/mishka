@@ -1,0 +1,11 @@
+.catalog-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 177px;
+  background-color: $gray-border;
+}
+
+.catalog-header__title {
+  font-size: 27px;
+}

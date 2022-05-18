@@ -1,0 +1,27 @@
+.catalog-card {
+  display: grid;
+  // grid-template-rows: auto 1fr auto;
+  // grid-template-columns: 1fr 1fr;
+}
+
+.catalog-card__title {
+  margin-top: 27px;
+  margin-bottom: 6px;
+  margin-left: 10%;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.catalog-card__img {
+  grid-row-start: 1;
+  // grid-row-end: span 3;
+}
+
+.catalog-card__params {
+  margin-bottom: 17px;
+  margin-left: 10%;
+  font-size: 13px;
+  line-height: 30px;
+  color: $black-blue-text;
+}
