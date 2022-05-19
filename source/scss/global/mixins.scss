@@ -1,0 +1,11 @@
+@mixin zigzag {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 320px;
+  height: 6px;
+  margin: 0 -30px;
+  content: '';
+  background-image: url('../../img/zigzag-line-desktop.svg');
+  background-position: center;
+}

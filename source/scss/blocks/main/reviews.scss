@@ -1,17 +1,9 @@
 .reviews {
   position: relative;
-  padding: 0 30px;
   margin-bottom: 38px;
 
   &::after {
-    position: absolute;
-    left: 0;
-    display: block;
-    width: 320px;
-    height: 6px;
-    content: '';
-    background-image: url('../../img/zigzag-line-desktop.svg');
-    background-position: center;
+    @include zigzag;
   }
 }
 

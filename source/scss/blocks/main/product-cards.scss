@@ -1,0 +1,12 @@
+.product-cards {
+  position: relative;
+  margin-bottom: 31px;
+
+  &::after {
+    @include zigzag;
+  }
+}
+
+.product-cards__content {
+  padding-bottom: 36px;
+}
