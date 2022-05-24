@@ -1,7 +1,10 @@
 .main-header {
-  display: block;
-  width: 100vw;
-  height: 506px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100% + (2 * $mobile-margin));
+  min-height: 489px;
   padding-top: 90px;
   margin-bottom: 31px;
   margin-left: (-$mobile-margin);
@@ -11,13 +14,41 @@
   box-shadow: $header-shadow;
 
   @media (min-width: $tablet-width) {
-    width: 100%;
-    margin-left: 0;
+    top: (-$header-bottom-row-size);
+    width: calc(100% + (2 * $non-mobile-margin));
+    min-height: 756px;
+    margin-left: (-$non-mobile-margin);
+    background-image: url('../../../img/hero-tablet.png');
+    background-size: contain;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url('../../../img/hero-desktop.png');
   }
 }
 
 .main-header__title {
-  margin-bottom: 120px;
   font-size: 27px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 86px;
+    font-size: 43px;
+    line-height: 50px;
+
+    .main-header_title-break:first-child {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.main-header__btn-list {
+  @media (min-width: $tablet-width) {
+    margin: 0 $non-mobile-margin;
+  }
 }

@@ -1,5 +1,6 @@
 .page-header {
   position: relative;
+  z-index: 1;
   width: 100%;
   margin: 0 auto;
 
@@ -13,12 +14,12 @@
   grid-template-rows: 79px repeat(2, auto);
 
   @media (min-width: $tablet-width) {
-    grid-template-rows: 107px auto;
+    grid-template-rows: 107px $header-bottom-row-size;
     grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-rows: 87px auto;
+    grid-template-rows: 87px $header-bottom-row-size;
     grid-template-columns: 1fr auto 1fr;
   }
 
@@ -97,6 +98,7 @@
 }
 
 .page-header__additional-info {
+  align-self: center;
   order: 4;
 
   @media (min-width: $desktop-width) {
