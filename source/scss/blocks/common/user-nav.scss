@@ -6,6 +6,8 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
+    justify-content: space-between;
+    width: 348px;
   }
 }
 
@@ -15,22 +17,19 @@
   margin: 0;
   font-size: 17px;
   line-height: 24px;
-  box-shadow: 0 1px 0 $light-gray-shadow, inset 0 1px 0 $light-gray-shadow;
+  box-shadow: $header-shadow;
 
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
     font-size: 15px;
-    box-shadow: none;
+    box-shadow: inset 1px 0 0 $light-gray-shadow;
+  }
+}
 
-    &:first-child {
-      flex: 0 0 55px;
-      box-shadow: 1px 0 0 $light-gray-shadow, inset 1px 0 0 $light-gray-shadow;
-    }
-
-    &:last-child {
-      justify-content: flex-end;
-    }
+.user-nav__search {
+  @media (min-width: $tablet-width) {
+    flex: 0 0 55px;
   }
 }
 
@@ -53,6 +52,9 @@
 .user-nav__cart-link {
   @media (min-width: $tablet-width) {
     flex: 0 0 231px;
+    width: auto;
+    height: auto;
+    margin-left: auto;
 
     .user-nav__svg {
       margin-right: 28px;
