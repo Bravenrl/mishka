@@ -4,14 +4,15 @@
 @import './global/global';
 @import './global/mixins';
 @import './blocks/common/page-body';
-@import './blocks/common/container';
+@import './blocks/common/additional-info';
 @import './blocks/common/page-header';
-@import './blocks/common/site-list';
-@import './blocks/common/user-list';
+@import './blocks/common/site-nav';
+@import './blocks/common/user-nav';
 @import './blocks/common/main-nav';
 @import './blocks/common/page-footer';
 @import './blocks/common/copyright';
 @import './blocks/common/social';
+@import './blocks/main/page-main';
 @import './blocks/main/main-header';
 @import './blocks/main/btn-list';
 @import './blocks/main/product-cards';
@@ -26,3 +27,6 @@
 @import './blocks/catalog/catalog-card';
 @import './blocks/catalog/card-cart';
 @import './blocks/catalog/catalog-info';
+@import './blocks/form/form-header';
+@import './blocks/form/order-form';
+@import './blocks/form/order';

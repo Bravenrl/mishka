@@ -9,3 +9,11 @@
   background-image: url('../../img/zigzag-line-desktop.svg');
   background-position: center;
 }
+
+@mixin margin-wrapper {
+  margin: 0 $mobile-margin;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 $non-mobile-margin;
+  }
+}

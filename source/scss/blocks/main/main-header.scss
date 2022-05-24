@@ -1,12 +1,18 @@
 .main-header {
   display: block;
-  width: 100%;
+  width: 100vw;
   height: 506px;
   padding-top: 90px;
   margin-bottom: 31px;
+  margin-left: (-$mobile-margin);
   background-image: url('../../img/hero-mobile@2x\ 1.png');
   background-repeat: no-repeat;
   background-position: 50% 0;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .main-header__title {

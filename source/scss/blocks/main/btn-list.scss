@@ -5,6 +5,10 @@
 
 .btn-list__item {
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
 }
 
 .main-header__button {
