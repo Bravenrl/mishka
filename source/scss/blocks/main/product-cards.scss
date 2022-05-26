@@ -2,6 +2,10 @@
   position: relative;
   margin-bottom: 31px;
 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 97px;
+  }
+
   &::after {
     @include zigzag;
   }
@@ -9,4 +13,12 @@
 
 .product-cards__content {
   padding-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 72px;
+  }
 }

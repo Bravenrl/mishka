@@ -135,8 +135,8 @@
     z-index: -1;
     grid-row: 1 / 5;
     grid-column: 3 / 4;
-    min-width: 525px;
-    min-height: 636px;
+    max-width: 525px;
+    max-height: 636px;
     content: url('../../../img/triple-set-desktop\ 1.png');
   }
 }

@@ -1,13 +1,26 @@
 @mixin zigzag {
   position: absolute;
+  bottom: 0;
   left: 0;
   display: block;
-  width: 320px;
+  width: calc(100% + 2 * $mobile-margin);
   height: 6px;
-  margin: 0 -30px;
+  margin-left: -($mobile-margin);
   content: '';
   background-image: url('../../img/zigzag-line-desktop.svg');
+  background-repeat: repeat-x;
   background-position: center;
+  background-size: contain;
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% + 2 * $non-mobile-margin);
+    height: 17px;
+    margin-left: -($non-mobile-margin);
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 23px;
+  }
 }
 
 @mixin margin-wrapper {

@@ -8,6 +8,7 @@
   padding-top: 90px;
   margin-bottom: 31px;
   margin-left: (-$mobile-margin);
+  background-color: $background-gray;
   background-image: url('../../img/hero-mobile@2x\ 1.png');
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -17,12 +18,19 @@
     top: (-$header-bottom-row-size);
     width: calc(100% + (2 * $non-mobile-margin));
     min-height: 756px;
+    margin-bottom: (-$header-bottom-row-size);
     margin-left: (-$non-mobile-margin);
     background-image: url('../../../img/hero-tablet.png');
-    background-size: contain;
+    background-size: fill;
+
+    &::after {
+      @include zigzag;
+      background-image: url('../../img/zigzag-fill-desktop.svg');
+    }
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: (-$header-bottom-row-size + 54px);
     background-image: url('../../../img/hero-desktop.png');
   }
 }

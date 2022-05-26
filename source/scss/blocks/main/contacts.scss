@@ -1,27 +1,84 @@
 .contacts {
+  display: grid;
+  row-gap: 49px;
   margin-bottom: 39px;
-}
 
-.contacts__wrapper {
-  padding-bottom: 39px;
+  @media (min-width: $desktop-width) {
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 2fr 3fr;
+  }
 }
 
 .contacts__title {
-  margin-bottom: 28px;
+  position: relative;
   font-size: 18px;
+
+  &::after {
+    position: absolute;
+    display: none;
+    content: url('../../../img/flag.svg');
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+
+    &::after {
+      right: 0;
+      bottom: -30%;
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 79px;
+    grid-column-start: 2;
+    align-self: end;
+    font-size: 53px;
+    line-height: 57px;
+
+    &::after {
+      right: 120%;
+      bottom: -10%;
+    }
+  }
 }
 
 .contacts__list {
-  margin-bottom: 62px;
+  display: flex;
+  flex: wrap;
+  flex-direction: column;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    grid-row-start: 2;
+    grid-column: 2;
+    align-self: left;
+  }
 }
 
 .contacts__item {
   display: flex;
+  flex: wrap;
   width: 100%;
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
   color: $black-blue-text;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .contacts__type {
@@ -30,6 +87,17 @@
 
 .contacts__button {
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    justify-self: center;
+    width: 230px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row-end: -1;
+    grid-column: 2 / 3;
+    justify-self: left;
+  }
 }
 
 .contacts__email {
@@ -37,6 +105,21 @@
 }
 
 .contacts__map {
+  width: calc(100% + 2 * $mobile-margin);
   margin-bottom: 42px;
-  margin-left: -30px;
+  margin-left: -($mobile-margin);
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% + 2 * $non-mobile-margin);
+    margin-bottom: 55px;
+    margin-left: -($non-mobile-margin);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: span 3;
+    width: 100%;
+    min-width: 527px;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
 }
