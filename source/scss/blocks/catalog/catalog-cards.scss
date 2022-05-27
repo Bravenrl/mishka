@@ -4,7 +4,13 @@
 
 .catalog-cards__list {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .catalog-cards__item {

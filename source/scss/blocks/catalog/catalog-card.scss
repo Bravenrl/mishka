@@ -1,10 +1,23 @@
 .catalog-card {
-  display: grid;
-  // grid-template-rows: auto 1fr auto;
-  // grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 334px;
+    width: auto;
+    min-height: 334px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: auto;
+    max-width: 30%;
+  }
 }
 
 .catalog-card__title {
+  display: block;
   margin-top: 27px;
   margin-bottom: 6px;
   margin-left: 10%;
@@ -14,14 +27,32 @@
 }
 
 .catalog-card__img {
-  grid-row-start: 1;
-  // grid-row-end: span 3;
+  align-self: center;
+  order: -1;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    max-width: 334px;
+    height: 100%;
+    content: url('../../../img/photo-1-tablet.png');
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    height: auto;
+    content: url('../../../img/photo-1-desktop.png');
+  }
 }
 
 .catalog-card__params {
+  display: block;
   margin-bottom: 17px;
   margin-left: 10%;
   font-size: 13px;
   line-height: 30px;
   color: $black-blue-text;
+}
+
+.catalog-card__cart {
+  margin: auto 33px 0 33px;
 }

@@ -1,6 +1,6 @@
 @mixin zigzag {
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   display: block;
   width: calc(100% + 2 * $mobile-margin);
@@ -28,5 +28,58 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 $non-mobile-margin;
+  }
+}
+
+@mixin content-header {
+  position: relative;
+  width: calc(100% + (2 * $mobile-margin));
+  margin-left: (-$mobile-margin);
+  box-shadow: $header-shadow;
+
+  @media (min-width: $tablet-width) {
+    top: (-$header-bottom-row-size);
+    width: calc(100% + (2 * $non-mobile-margin));
+    margin-bottom: (-$header-bottom-row-size);
+    margin-left: (-$non-mobile-margin);
+
+    &::after {
+      @include zigzag;
+      background-image: url('../../img/zigzag-fill-desktop.svg');
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: (-$header-bottom-row-size + 54px);
+  }
+}
+
+@mixin non-main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 177px;
+  background-color: $gray-border;
+
+  @media (min-width: $tablet-width) {
+    height: 238px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 272px;
+  }
+}
+
+@mixin page-title {
+  font-size: 27px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
   }
 }

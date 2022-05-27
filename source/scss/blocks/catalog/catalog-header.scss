@@ -1,4 +1,7 @@
 .catalog-header {
+  @include content-header;
+  @include non-main-header;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,5 +10,5 @@
 }
 
 .catalog-header__title {
-  font-size: 27px;
+  @include page-title;
 }
