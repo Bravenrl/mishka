@@ -6,7 +6,16 @@
   align-items: center;
   justify-content: center;
   height: 177px;
+  margin-bottom: 48px;
   background-color: $gray-border;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 77px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 111px;
+  }
 }
 
 .catalog-header__title {
