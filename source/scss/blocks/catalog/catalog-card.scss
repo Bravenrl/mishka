@@ -1,18 +1,17 @@
 .catalog-card {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
+
 
   @media (min-width: $tablet-width) {
-    flex-basis: 334px;
-    width: auto;
-    min-height: 334px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   @media (min-width: $desktop-width) {
-    flex-basis: auto;
-    max-width: 30%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-width: 30%;
   }
 }
 
@@ -26,21 +25,38 @@
   line-height: 24px;
 }
 
-.catalog-card__img {
+.catalog-card__img-wrapper {
+  flex-grow: 0;
   align-self: center;
-  order: -1;
-  width: 100%;
 
   @media (min-width: $tablet-width) {
-    max-width: 334px;
-    height: 100%;
-    content: url('../../../img/photo-1-tablet.png');
+    flex-basis: 50%;
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
-    height: auto;
-    content: url('../../../img/photo-1-desktop.png');
+    flex-basis: auto;
+  }
+}
+
+.catalog-card__content {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  justify-content: center;
+}
+
+.catalog-card__img {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    min-width: 334px;
+    min-height: 334px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 316px;
+    min-height: 462px;
   }
 }
 
