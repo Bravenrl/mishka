@@ -14,5 +14,7 @@
 }
 
 .catalog-cards__item {
-  margin-bottom: 30px;
+  @media (min-width: $desktop-width) {
+    width: 33.33%;
+  }
 }

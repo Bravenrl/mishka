@@ -51,12 +51,22 @@
       <div class="page-header__wrapper">
         <div class="page-header__logo-wrapper">
           <a href="#" class="page-header__logo">
-            <img
-              src="img/logo-mobile.svg"
-              alt="Мишка логотип"
-              width="86"
-              height="35"
-            />
+            <picture>
+              <source
+                media="(min-width: 1150px)"
+                srcset="./img/mishka-logo-desktop.svg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./img/mishka-logo-tablet.svg"
+              />
+              <img
+                src="img/logo-mobile.svg"
+                alt="Мишка логотип"
+                width="86"
+                height="35"
+              />
+            </picture>
           </a>
         </div>
         <button class="page-header__toggle" type="button">
@@ -118,7 +128,10 @@
         <ul class="main-header__btn-list btn-list">
           <li class="btn-list__item">
             <button class="btn-list__button interior btn-left">
-              <span class="btn__title"> Предметы <br/> интерьера </span>
+              <span class="btn__title">
+                Предметы <br />
+                интерьера
+              </span>
               <svg
                 class="btn__svg"
                 width="40"
@@ -139,9 +152,12 @@
           </li>
           <li class="btn-list__item">
             <button class="btn-list__button toys btn-right">
-              <span class="btn__title"> Детские <br/> игрушки </span>
+              <span class="btn__title">
+                Детские <br />
+                игрушки
+              </span>
               <svg
-               class="btn__svg"
+                class="btn__svg"
                 width="68"
                 height="68"
                 fill="none"
@@ -197,13 +213,32 @@
           <li class="product-cards__content product-card">
             <h3 class="product-card__title title">Вязаные корзинки</h3>
             <h4 class="product-card__category">Товар недели</h4>
-            <img
-              class="product-card__img"
-              src="./img/triple-set-mobile 1.png"
-              alt=""
-              width="260"
-              height="315"
-            />
+            <p class="product-card__img-wrapper">
+              <picture>
+                <source
+                media="(min-width: 1150px)"
+                srcset="
+                  ./img/triple-set-desktop.png    1x,
+                  ./img/triple-set-desktop@2x.png 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  ./img/triple-set-tablet.png    1x,
+                  ./img/triple-set-tablet@2x.png 2x
+                "
+              />
+                <img
+                class="product-card__img"
+                src="./img/triple-set-mobile.png"
+                srcset="./img/triple-set-mobile@2x.png 2x"
+                alt=""
+                width="260"
+                height="315"
+                />
+              </picture>
+            </p>
             <p class="product-card__text">
               Экологически чистая пряжа, <br />
               ручная работа. Доступны в шести расцветках и трёх размерах

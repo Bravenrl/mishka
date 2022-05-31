@@ -62,12 +62,22 @@
       <div class="page-header__wrapper">
         <div class="page-header__logo-wrapper">
           <a href="#" class="page-header__logo">
-            <img
-              src="img/logo-mobile.svg"
-              alt="Мишка логотип"
-              width="86"
-              height="35"
-            />
+            <picture>
+              <source
+                media="(min-width: 1150px)"
+                srcset="./img/mishka-logo-desktop.svg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./img/mishka-logo-tablet.svg"
+              />
+              <img
+                src="img/logo-mobile.svg"
+                alt="Мишка логотип"
+                width="86"
+                height="35"
+              />
+            </picture>
           </a>
         </div>
         <button class="page-header__toggle" type="button">
@@ -128,8 +138,20 @@
           <li class="catalog-cards__item catalog-card">
             <p class="catalog-card__img-wrapper">
               <picture>
-                <source media="(min-width: 1150px)" srcset="./img/photo-1-desktop.png 1x, ./img/photo-1-desktop@2x.png 2x" />
-                <source media="(min-width: 768px)" srcset="./img/photo-1-tablet.png 1x, ./img/photo-1-tablet@2x.png 2x" />
+                <source
+                  media="(min-width: 1150px)"
+                  srcset="
+                    ./img/photo-1-desktop.png    1x,
+                    ./img/photo-1-desktop@2x.png 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/photo-1-tablet.png    1x,
+                    ./img/photo-1-tablet@2x.png 2x
+                  "
+                />
                 <img
                   class="catalog-card__img"
                   src="./img/photo-1-mobile.png"
@@ -157,8 +179,20 @@
           <li class="catalog-cards__item catalog-card">
             <p class="catalog-card__img-wrapper">
               <picture>
-                <source media="(min-width: 1150px)" srcset="./img/photo-2-desktop.png 1x, ./img/photo-2-desktop@2x.png 2x" />
-                <source media="(min-width: 768px)" srcset="./img/photo-2-tablet.png 1x, ./img/photo-2-tablet@2x.png 2x" />
+                <source
+                  media="(min-width: 1150px)"
+                  srcset="
+                    ./img/photo-2-desktop.png    1x,
+                    ./img/photo-2-desktop@2x.png 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/photo-2-tablet.png    1x,
+                    ./img/photo-2-tablet@2x.png 2x
+                  "
+                />
                 <img
                   class="catalog-card__img"
                   src="./img/photo-2-mobile.png"
@@ -186,8 +220,20 @@
           <li class="catalog-cards__item catalog-card">
             <p class="catalog-card__img-wrapper">
               <picture>
-                <source media="(min-width: 1150px)" srcset="./img/photo-3-desktop.png 1x, ./img/photo-3-desktop@2x.png 2x" />
-                <source media="(min-width: 768px)" srcset="./img/photo-3-tablet.png 1x, ./img/photo-3-tablet@2x.png 2x" />
+                <source
+                  media="(min-width: 1150px)"
+                  srcset="
+                    ./img/photo-3-desktop.png    1x,
+                    ./img/photo-3-desktop@2x.png 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/photo-3-tablet.png    1x,
+                    ./img/photo-3-tablet@2x.png 2x
+                  "
+                />
                 <img
                   class="catalog-card__img"
                   src="./img/photo-3-mobile.png"

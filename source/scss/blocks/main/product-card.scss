@@ -119,24 +119,27 @@
   font-size: 18px;
 }
 
-.product-card__img {
-  width: 100%;
-  height: 100%;
+.product-card__img-wrapper {
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     grid-row: 2 / 5;
     grid-column: 2 / 3;
-    min-width: 334px;
-    min-height: 404px;
-    content: url('../../../img/triple-set-tablet\ 1.png');
+
+    img {
+      min-width: 334px;
+      min-height: 404px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     z-index: -1;
     grid-row: 1 / 5;
     grid-column: 3 / 4;
-    max-width: 525px;
-    max-height: 636px;
-    content: url('../../../img/triple-set-desktop\ 1.png');
+
+    img {
+      min-width: 525px;
+      min-height: 636px;
+    }
   }
 }
