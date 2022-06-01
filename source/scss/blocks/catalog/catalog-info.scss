@@ -39,6 +39,7 @@
     max-width: 20%;
     height: 7em;
     margin-left: 57px;
+    padding-top: 22px;
   }
 }
 
@@ -77,6 +78,7 @@
   order: 2;
   min-width: 100%;
   height: auto;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     order: 1;

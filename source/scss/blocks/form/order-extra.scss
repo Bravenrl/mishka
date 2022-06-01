@@ -1,0 +1,15 @@
+.order-extra {
+  @include fieldset-padding-top;
+  @include fieldset-padding-bottom;
+  padding-bottom: 17px;
+
+  .order__title {
+    @media (min-width: $tablet-width) {
+      margin-top: 17px;
+    }
+  }
+}
+
+.extra__input {
+  padding: 17px;
+}

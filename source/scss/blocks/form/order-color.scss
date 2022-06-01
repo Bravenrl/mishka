@@ -1,0 +1,79 @@
+.order-color {
+  @include fieldset-padding-top;
+  @include fieldset-padding-bottom;
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    background-color: $gray-border;
+  }
+}
+
+.color__list {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.color__item {
+  width: 100%;
+  height: 38px;
+
+  &:not(:last-child) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    height: 52px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 33.33%;
+  }
+}
+
+.color__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.color__input + label::before {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  margin-right: 42px;
+  content: '';
+  background-color: transparent;
+  border: 2px solid $black-blue-text;
+
+  @media (min-width: $tablet-width) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.color__input:checked + label::after {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  width: 12px;
+  height: 22px;
+  content: '';
+  background-color: transparent;
+  border-right: 2px solid $black-blue-text;
+  border-bottom: 2px solid $black-blue-text;
+  transform: rotate(45deg);
+
+  @media (min-width: $tablet-width) {
+    bottom: 18px;
+    left: 22px;
+    width: 12px;
+    height: 32px;
+  }
+}
+
+.color__input:focus + label::before {
+  box-shadow: 0 0 0 2px $radio-green;
+}

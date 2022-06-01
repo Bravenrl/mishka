@@ -1,0 +1,28 @@
+.order-user {
+  @include fieldset-padding-top;
+  @include fieldset-padding-bottom;
+  padding-bottom: 35px;
+}
+
+.user__list {
+  flex-grow: 1;
+}
+
+.user__item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: center;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.user__label {
+  margin-right: 24px;
+}

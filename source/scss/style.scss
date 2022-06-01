@@ -12,6 +12,7 @@
 @import './blocks/common/page-footer';
 @import './blocks/common/copyright';
 @import './blocks/common/social';
+@import './blocks/common/catalog-header';
 @import './blocks/main/page-main';
 @import './blocks/main/main-header';
 @import './blocks/main/btn-list';
@@ -22,11 +23,13 @@
 @import './blocks/main/reviews';
 @import './blocks/main/contacts';
 @import './blocks/main/slider';
-@import './blocks/catalog/catalog-header';
 @import './blocks/catalog/catalog-cards';
 @import './blocks/catalog/catalog-card';
 @import './blocks/catalog/card-cart';
 @import './blocks/catalog/catalog-info';
-@import './blocks/form/form-header';
 @import './blocks/form/order-form';
 @import './blocks/form/order';
+@import './blocks/form/order-user';
+@import './blocks/form/order-extra';
+@import './blocks/form/order-color';
+@import './blocks/form/order-type';
