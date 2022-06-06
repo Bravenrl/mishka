@@ -17,9 +17,7 @@
   margin: 0;
   border: none;
 
-  input[type='text'],
-  [type='tel'],
-  [type='email'] {
+  input[type='text'] {
     display: block;
     width: 100%;
     height: 52px;
@@ -117,20 +115,6 @@
   }
 }
 
-.order-email {
-  @include fieldset-padding-bottom;
-  padding-bottom: 35px;
-
-  @media (min-width: $tablet-width) {
-    background-color: $gray-border;
-  }
-
-  .order__title {
-    @media (min-width: $tablet-width) {
-      margin-top: 17px;
-    }
-  }
-}
 
 .order-phone {
   @include fieldset-padding-top;
