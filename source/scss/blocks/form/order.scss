@@ -1,31 +1,10 @@
-@mixin fieldset-padding-top {
-  @media (min-width: $tablet-width) {
-    padding-top: 55px;
-  }
-}
-
-@mixin fieldset-padding-bottom {
-  padding-bottom: 40px;
-
-  @media (min-width: $tablet-width) {
-    padding-bottom: 46px;
-  }
-}
-
 .order__field {
   padding: 0;
   margin: 0;
   border: none;
 
   input[type='text'] {
-    display: block;
-    width: 100%;
-    height: 52px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    box-shadow: inset 0 -2px 0 $black;
-    offset: none;
+    @include input;
   }
 
   textarea {
@@ -37,7 +16,9 @@
     offset: none;
   }
 
-  textarea:focus {
+  textarea:focus,
+  textarea:hover,
+  textarea:active {
     border: 2px solid $radio-green;
   }
 
@@ -50,10 +31,6 @@
     @media (min-width: $tablet-width) {
       font-size: 19px;
     }
-  }
-
-  input:focus {
-    box-shadow: inset 0 -2px 0 $radio-green;
   }
 
   label {
@@ -69,67 +46,11 @@
 }
 
 .order__content-wrapper {
-  @include margin-wrapper;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: row;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-right: 240px;
-  }
+  @include content-wrapper;
 }
 
 .order__title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 12px;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 16px;
-  color: $green-text;
-  text-transform: uppercase;
-
-  @media (max-width: $only-mobile-width) {
-    &::after {
-      display: block;
-      width: 100%;
-      height: 1px;
-      margin-left: 20px;
-      content: '';
-      background-color: $green-text;
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    flex: 0 0 169px;
-    align-self: flex-start;
-  }
-
-  @media (min-width: $desktop-width) {
-    flex: 0 0 175px;
-    padding-left: 4%;
-  }
-}
-
-
-.order-phone {
-  @include fieldset-padding-top;
-  padding-bottom: 35px;
-
-  @media (min-width: $tablet-width) {
-    padding-bottom: 24px;
-    background-color: $gray-border;
-  }
-
-  .order__title {
-    @media (min-width: $tablet-width) {
-      margin-top: 17px;
-    }
-  }
+  @include title;
 }
 
 .order__submit-wrapper {

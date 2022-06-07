@@ -121,6 +121,7 @@
                     name="user-name"
                     id="name"
                     placeholder="Введите ваше имя*"
+                    required
                   />
                 </li>
                 <li class="user__item">
@@ -131,6 +132,7 @@
                     name="user-surname"
                     id="surname"
                     placeholder="Укажите фамилию*"
+                    required
                   />
                 </li>
                 <li class="user__item">
@@ -148,32 +150,40 @@
           </fieldset>
           <fieldset class="order__field order-phone">
             <legend class="visually-hidden">Тел</legend>
-            <div class="order__content-wrapper">
-              <span class="order__title">Тел</span>
-              <input
-                class="phone__input"
+            <div class="order-phone__content-wrapper">
+              <span class="order-phone__title">Тел</span>
+                <input
+                class="order-phone__input"
                 type="tel"
                 name="phone"
                 id="phone"
                 placeholder="+7 XXX XXX XX XX*"
-              />
-              <label class="visually-hidden" for="phone">Телефон</label>
+                required
+                maxlength="30"
+                />
+                <svg class="order-phone__input-svg" width="25" height="24">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+                <label class="visually-hidden" for="phone">Телефон</label>
             </div>
           </fieldset>
           <fieldset class="order__field order-email">
             <legend class="visually-hidden">E-mail</legend>
-            <div class="order__content-wrapper">
-              <span class="order__title">E-mail</span>
-              <div class="order__input-wrapper">
+            <div class="order-email__content-wrapper">
+              <span class="order-email__title">E-mail</span>
                 <input
-                  class="email__input"
+                  class="order-email__input"
                   type="email"
                   name="email"
                   id="email"
                   placeholder="Ваш Email*"
+                  required
+                  maxlength="30"
                 />
+                <svg class="order-email__input-svg" width="32" height="21">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
                 <label class="visually-hidden" for="email">E-mail</label>
-              </div>
             </div>
           </fieldset>
           <fieldset class="order__field order-extra">

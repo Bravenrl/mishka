@@ -27,6 +27,7 @@
 @import './blocks/catalog/catalog-card';
 @import './blocks/catalog/card-cart';
 @import './blocks/catalog/catalog-info';
+@import './blocks/form/form-mixins';
 @import './blocks/form/order-form';
 @import './blocks/form/order';
 @import './blocks/form/order-user';
@@ -34,3 +35,4 @@
 @import './blocks/form/order-color';
 @import './blocks/form/order-type';
 @import './blocks/form/order-email';
+@import './blocks/form/order-phone';

@@ -1,0 +1,49 @@
+.order-phone {
+  @include fieldset-padding-top;
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 24px;
+    background-color: $gray-border;
+  }
+}
+
+.order-phone__content-wrapper {
+  @include content-wrapper;
+  position: relative;
+}
+
+.order-phone__title {
+  @include title;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 17px;
+  }
+}
+
+.order-phone__input {
+  @include input;
+}
+
+.order-phone__input:hover + .order-phone__input-svg,
+.order-phone__input:active + .order-phone__input-svg,
+.order-phone__input:focus + .order-phone__input-svg {
+  opacity: 1;
+  fill: $radio-green;
+}
+
+.order-phone__input-svg {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  opacity: 0.2;
+
+  @media (min-width: $tablet-width) {
+    top: 40%;
+    right: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 6px;
+  }
+}

@@ -77,3 +77,11 @@
 .color__input:focus + label::before {
   box-shadow: 0 0 0 2px $radio-green;
 }
+
+.color__input:hover + label::before {
+  border: 2px solid $radio-green;
+}
+
+.color__input:active + label::before {
+  border: 2px solid $black-blue-text-opacity30;
+}

@@ -63,3 +63,11 @@
 .type__input:focus + label::before {
   box-shadow: 0 0 0 2px $radio-green;
 }
+
+.type__input:hover + label::before {
+  border: 2px solid $radio-green;
+}
+
+.type__input:active + label::before {
+  border: 2px solid $black-blue-text-opacity30;
+}

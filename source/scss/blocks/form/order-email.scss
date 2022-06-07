@@ -1,31 +1,48 @@
 .order-email {
-  .order__input-wrapper {
-    width: 100%;
-    box-shadow: inset 0 -2px 0 $black;
-  }
-
-  input[type='email'] {
-    display: block;
-    width: 90%;
-    height: 52px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-
-    offset: none;
-  }
-
-
   @include fieldset-padding-bottom;
   padding-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     background-color: $gray-border;
   }
+}
 
-  .order__title {
-    @media (min-width: $tablet-width) {
-      margin-top: 17px;
-    }
+.order-email__content-wrapper {
+  @include content-wrapper;
+  position: relative;
+}
+
+.order-email__input {
+  @include input;
+}
+
+.order-email__title {
+  @include title;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 17px;
   }
+}
+
+.order-email__input-svg {
+  position: absolute;
+  top: 55%;
+  right: 6px;
+  opacity: 0.2;
+
+  @media (min-width: $tablet-width) {
+    top: 40%;
+    right: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 6px;
+  }
+}
+
+.order-email__input:hover + .order-email__input-svg,
+.order-email__input:active + .order-email__input-svg,
+.order-email__input:focus + .order-email__input-svg {
+  opacity: 1;
+  fill: $radio-green;
 }
