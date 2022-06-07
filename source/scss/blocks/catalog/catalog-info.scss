@@ -2,6 +2,10 @@
   margin-bottom: 56px;
   border-top: 1px solid $gray-border;
   border-bottom: 1px solid $gray-border;
+
+  &:hover {
+    box-shadow: 0 6px 10px $black-opacity10;
+  }
 }
 
 .catalog-info__content-wrapper {
@@ -105,14 +109,28 @@
   background-color: $green-left-btn;
   border: 5px solid $white;
   border-radius: 20%;
+  transition: all 0.2s;
 
   &::before {
     position: absolute;
-    top: 20%;
-    right: 5%;
+    top: 50%;
+    left: 50%;
     content: '';
     border: 20px solid transparent;
     border-left: 35px solid $white;
+    transition: all 0.2s;
+    transform: translate(-25%, -50%);
+  }
+
+  &:hover {
+    width: 121px;
+    height: 92px;
+  }
+
+  &:active {
+    width: 81px;
+    height: 62px;
+    background-color: $green-left-btn-opacity70;
   }
 }
 

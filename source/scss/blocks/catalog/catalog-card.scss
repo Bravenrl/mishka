@@ -19,6 +19,14 @@
       margin-right: 5%;
     }
   }
+
+  &:hover {
+    box-shadow: 0 6px 10px $black-opacity10;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px $black-opacity10;
+  }
 }
 
 .catalog-card__title {
@@ -36,7 +44,6 @@
   flex-wrap: wrap;
   min-width: 100%;
   padding: 0 28px;
-
 
   @media (min-width: $tablet-width) {
     flex: 0 1 50%;

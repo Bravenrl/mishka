@@ -21,3 +21,16 @@
   background-color: inherit;
   border: none;
 }
+
+.card-cart__svg {
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+    fill: $green-text;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
