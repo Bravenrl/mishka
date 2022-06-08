@@ -1,12 +1,9 @@
 <footer class="page-footer">
   <div class="page-footer__wrapper">
-    <a href="/" class="page-footer__logo">
-      <img
-        src="img/logo-mobile.svg"
-        alt="Мишка логотип"
-        width="86"
-        height="35"
-      />
+    <a href="/" class="page-footer__logo" aria-label="Логотип сайта Мишка">
+      <svg role="img" width="86" height="35">
+        <use xlink:href="img/sprite.svg#icon-logo"></use>
+      </svg>
     </a>
     <div class="page-footer__social social">
       <ul class="social__list">
@@ -40,7 +37,7 @@
       <a href="https://htmlacademy.ru" class="copyright__link" aria-label="Сайт HTML-Academy">
         <p class="copyright__text">Разработано</p>
         <span class="visually-hidden">HTML-Academy</span>
-        <svg role="img" class="copyright__svg" width="27" height="34">
+        <svg role="img" class="copyright__svg" width="27" height="34" fill="#63D1BB">
           <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
         </svg>
       </a>

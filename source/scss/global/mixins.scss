@@ -83,3 +83,92 @@
     line-height: 57px;
   }
 }
+
+@mixin footer-svg {
+  &:hover svg {
+    fill: $green-right-btn-hover;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+@mixin title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 12px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  color: $green-text;
+  text-transform: uppercase;
+
+  @media (max-width: $only-mobile-width) {
+    &::after {
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin-left: 20px;
+      content: '';
+      background-color: $green-text;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    flex: 0 0 169px;
+    align-self: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex: 0 0 175px;
+    padding-left: 4%;
+  }
+}
+
+
+@mixin input {
+  display: block;
+  width: 100%;
+  height: 52px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  offset: none;
+  box-shadow: inset 0 -2px 0 $black;
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: inset 0 -2px 0 $radio-green;
+  }
+}
+
+@mixin fieldset-padding-top {
+  @media (min-width: $tablet-width) {
+    padding-top: 55px;
+  }
+}
+
+@mixin fieldset-padding-bottom {
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 46px;
+  }
+}
+
+@mixin content-wrapper {
+  @include margin-wrapper;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 240px;
+  }
+}

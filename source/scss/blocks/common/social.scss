@@ -18,6 +18,8 @@
 }
 
 .social__link {
+  @include footer-svg;
+
   display: flex;
   align-items: center;
   justify-content: center;

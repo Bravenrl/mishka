@@ -1,3 +1,21 @@
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+
 .page-header {
   position: relative;
   z-index: 1;
@@ -20,6 +38,7 @@
 }
 
 .page-header__wrapper {
+  position: relative;
   display: grid;
   grid-template-rows: 79px repeat(2, auto);
 
@@ -37,6 +56,15 @@
 }
 
 .page-header__site-nav {
+  @media (max-width: $only-mobile-width) {
+    display: none;
+
+    &--active {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     align-self: stretch;
     order: 3;
@@ -48,6 +76,15 @@
 }
 
 .page-header__user-nav {
+  @media (max-width: $only-mobile-width) {
+    display: none;
+
+    &--active {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     align-self: center;
     justify-self: end;
@@ -92,24 +129,10 @@
 }
 
 .page-header__toggle {
-  position: absolute;
-  top: 2.1em;
-  right: 2.1em;
-  width: 20px;
-  height: 2px;
-  background-color: $black;
-  border: none;
+  display: none;
 
-  &::after {
-    content: '';
-  }
-
-  &::before {
-    content: '';
-  }
-
-  @media (min-width: $tablet-width) {
-    display: none;
+  @media (max-width: $only-mobile-width) {
+    display: block;
   }
 }
 
