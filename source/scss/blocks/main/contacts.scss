@@ -102,6 +102,15 @@
 
 .contacts__email {
   color: inherit;
+  border-bottom: 1px solid $green-right-btn-hover;
+
+  &:hover {
+    color: $green-right-btn-hover;
+  }
+
+  &:active {
+    border-bottom: none;
+  }
 }
 
 .contacts__map {

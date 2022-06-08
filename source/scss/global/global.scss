@@ -29,4 +29,13 @@
   cursor: pointer;
   background-color: transparent;
   border: 2px solid $black-blue-text;
+
+  &:hover {
+    color: $white;
+    background-color: $black-blue-text;
+  }
+
+  &:active {
+    color: $white-opacity30;
+  }
 }

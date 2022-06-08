@@ -13,6 +13,7 @@
 
 .btn__svg {
   align-self: center;
+  opacity: 0.5;
 }
 
 .btn__title {
@@ -47,8 +48,26 @@
 
 .btn-left {
   background-color: $green-left-btn;
+
+  &:hover {
+    background-color: $green-left-btn-hover;
+  }
 }
 
 .btn-right {
   background-color: $green-right-btn;
+
+  &:hover {
+    background-color: $green-right-btn-hover;
+  }
+}
+
+.btn-left:hover > img,
+.btn-right:hover > img {
+  opacity: 0.7;
+}
+
+.btn-left:active > img,
+.btn-right:active > img {
+  opacity: 0.3;
 }
