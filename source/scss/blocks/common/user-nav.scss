@@ -81,3 +81,16 @@
 .user-nav__cart-value {
   white-space: nowrap;
 }
+
+.user-nav__item svg {
+  opacity: 0.2;
+}
+
+.user-nav__link:hover svg {
+  opacity: 1;
+  fill: $green-left-btn;
+}
+
+.user-nav__link:active svg {
+  opacity: 0.3;
+}

@@ -9,6 +9,16 @@
   }
 }
 
+.page-header a {
+  &:hover {
+    color: $black-opacity60;
+  }
+
+  &:active {
+    color: $black-opacity30;
+  }
+}
+
 .page-header__wrapper {
   display: grid;
   grid-template-rows: 79px repeat(2, auto);
@@ -70,6 +80,14 @@
       width: 149px;
       height: 72px;
     }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
