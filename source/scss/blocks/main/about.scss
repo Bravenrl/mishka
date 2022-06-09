@@ -45,7 +45,7 @@
 
 .material {
   &::before {
-    content: url('../../img/icon-1.svg');
+    content: url('../img/icon-1.svg');
   }
 
   @media (min-width: $tablet-width) {
@@ -55,7 +55,7 @@
 
 .style {
   &::before {
-    content: url('../../img/icon-3.svg');
+    content: url('../img/icon-3.svg');
   }
 
   @media (min-width: $tablet-width) {
@@ -65,7 +65,7 @@
 
 .like {
   &::before {
-    content: url('../../img/icon-5.svg');
+    content: url('../img/icon-5.svg');
   }
   @media (min-width: $tablet-width) {
     order: 5;
@@ -74,7 +74,7 @@
 
 .handmade {
   &::before {
-    content: url('../../img/icon-2.svg');
+    content: url('../img/icon-2.svg');
   }
 
   @media (min-width: $tablet-width) {
@@ -84,7 +84,7 @@
 
 .support {
   &::before {
-    content: url('../../img/icon-4.svg');
+    content: url('../img/icon-4.svg');
   }
 
   @media (min-width: $tablet-width) {
@@ -94,7 +94,7 @@
 
 .package {
   &::before {
-    content: url('../../img/icon-6.svg');
+    content: url('../img/icon-6.svg');
   }
 
   @media (min-width: $tablet-width) {

@@ -10,12 +10,12 @@ import cleanCSS from 'gulp-clean-css';
 import rename from 'gulp-rename';
 import webp from 'gulp-webp';
 import svgstore from 'gulp-svgstore';
-import imagemin from 'gulp-imagemin';
 import htmlmin from 'gulp-htmlmin';
 import del from 'del';
 import csso from 'postcss-csso';
 import terser from 'gulp-terser';
 import fileinclude from 'gulp-file-include';
+import imagemin, { mozjpeg, optipng, svgo } from 'gulp-imagemin';
 
 const sass = gulpSass(dartSass);
 const browser = browserSync.create();
@@ -48,14 +48,13 @@ const lintCss = () => {
 
 const minifyHtml = () => {
   return gulp
-    .src([
-      'source/**/*.html',
-      '!source/components/**/*.html',
-    ])
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-    }))
+    .src(['source/**/*.html', '!source/components/**/*.html'])
+    .pipe(
+      fileinclude({
+        prefix: '@@',
+        basepath: '@file',
+      })
+    )
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'))
     .pipe(browser.stream());
@@ -86,15 +85,17 @@ const optimizeImages = () => {
     .src('source/img/**/*.{jpg,png,svg}')
     .pipe(
       imagemin([
-        imagemin.mozjpeg({ quality: 90, progressive: true }),
-        imagemin.optipng({ optimizationLevel: 3 }),
-        imagemin.svgo(),
+        mozjpeg({ quality: 90, progressive: true }),
+        optipng({ optimizationLevel: 3 }),
+        svgo(),
       ])
     );
 };
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg,svg}').pipe(gulp.dest('build/img'));
+  return gulp
+    .src(['source/img/**/*.{jpg,png,svg}', '!source/img/icons/*.svg'])
+    .pipe(gulp.dest('build/img'));
 };
 
 // Sprite
@@ -133,17 +134,9 @@ const watcher = () => {
 
 const createCopy = done => {
   gulp
-    .src(
-      [
-        'source/fonts/*.{woff2,woff}',
-        'source/*.ico',
-        'source/img/**/*.{jpeg, png, svg}',
-        '!source/img/icons/*.svg',
-      ],
-      {
-        base: 'source',
-      }
-    )
+    .src(['source/fonts/*.{woff2,woff}', 'source/*.ico'], {
+      base: 'source',
+    })
     .pipe(gulp.dest('build'));
   done();
 };
@@ -160,6 +153,7 @@ const build = gulp.series(
   clean,
   createCopy,
   optimizeImages,
+  copyImages,
   gulp.parallel(styles, minifyHtml, compressScripts, createSprite, createWebp)
 );
 

@@ -16,7 +16,7 @@
   &::after {
     position: absolute;
     display: none;
-    content: url('../../../img/flag.svg');
+    content: url('../img/flag.svg');
   }
 
   @media (min-width: $tablet-width) {

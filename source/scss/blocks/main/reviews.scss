@@ -59,27 +59,27 @@
     z-index: -1;
     height: 100%;
     content: '';
-    background-image: url('../../../img/review-background.png');
+    background-image: url('../img/review-background.png');
     background-position: center;
     background-size: cover;
 
     @media (min-width: $tablet-width) {
       width: 335px;
       margin-left: (-$non-mobile-margin);
-      background-image: url('../../../img/review2.png');
+      background-image: url('../img/review2.png');
 
       @media (min-resolution: 2dppx) {
-        background-image: url('../../img/review2@2x.png');
+        background-image: url('../img/review2@2x.png');
       }
     }
 
     @media (min-width: $desktop-width) {
       width: 352px;
       margin-left: 0;
-      background-image: url('../../../img/review1.png');
+      background-image: url('../img/review1.png');
 
       @media (min-resolution: 2dppx) {
-        background-image: url('../../img/review1@2x.png');
+        background-image: url('../img/review1@2x.png');
       }
     }
   }

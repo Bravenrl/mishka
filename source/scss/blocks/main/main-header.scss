@@ -8,31 +8,31 @@
   padding-top: 90px;
   margin-bottom: 31px;
   background-color: $background-gray;
-  background-image: url('../../img/hero-mobile.png');
+  background-image: url('../img/hero-mobile.png');
   background-repeat: no-repeat;
   background-position: 50% 0;
 
   @media (min-resolution: 2dppx) {
-    background-image: url('../../img/hero-mobile@2x.png');
+    background-image: url('../img/hero-mobile@2x.png');
     background-size: 320px auto;
   }
 
   @media (min-width: $tablet-width) {
     min-height: 756px;
-    background-image: url('../../../img/hero-tablet.png');
+    background-image: url('../img/hero-tablet.png');
     background-size: fill;
 
     @media (min-resolution: 2dppx) {
-      background-image: url('../../img/hero-tablet@2x.png');
+      background-image: url('img/hero-tablet@2x.png');
       background-size: 768px auto;
     }
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url('../../../img/hero-desktop.png');
+    background-image: url('../img/hero-desktop.png');
 
     @media (min-resolution: 2dppx) {
-      background-image: url('../../img/hero-desktop@2x.png');
+      background-image: url('../img/hero-desktop@2x.png');
       background-size: 1150px auto;
     }
   }
