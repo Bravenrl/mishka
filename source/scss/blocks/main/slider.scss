@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    animation: fadeIn 0.5s ease-in-out;
   }
 }
 
@@ -27,7 +28,8 @@
     opacity: 0.6;
   }
 
-  &:active {
+  &:active,
+  &:disabled {
     opacity: 0.3;
   }
 }
