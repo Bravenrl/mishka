@@ -16,6 +16,7 @@ import csso from 'postcss-csso';
 import terser from 'gulp-terser';
 import fileinclude from 'gulp-file-include';
 import imagemin, { mozjpeg, optipng, svgo } from 'gulp-imagemin';
+import { htmlValidator } from 'gulp-w3c-html-validator';
 
 const sass = gulpSass(dartSass);
 const browser = browserSync.create();
@@ -55,6 +56,8 @@ const minifyHtml = () => {
         basepath: '@file',
       })
     )
+    .pipe(htmlValidator.analyzer())
+    .pipe(htmlValidator.reporter())
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'))
     .pipe(browser.stream());
